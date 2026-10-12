@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#170d28">
+  <title>Happy Birthday Nisha 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="fireworks" aria-hidden="true"></canvas>
+  <div class="stars" aria-hidden="true"></div>
+
+  <main class="page">
+    <div class="top-tag">✦ A LITTLE WORLD MADE FOR YOU ✦</div>
+
+    <div class="orbit orbit-one">♡</div>
+    <div class="orbit orbit-two">✦</div>
+
+    <section class="intro" id="intro">
+      <div class="mini-hearts">💗 ✨ 🦋 ✨ 💗</div>
+      <p class="eyebrow">Someone very special was born today...</p>
+      <h1>It's your day,<br><span>Nisha!</span></h1>
+      <p class="subtitle">A little surprise for my little star 🌷</p>
+
+      <button class="gift-button" id="openGift" type="button">
+        <span class="gift-icon">🎁</span>
+        <span>Open My Surprise</span>
+        <span class="button-sparkle">✦</span>
+      </button>
+      <p class="tap-note">Tap to unlock your magical world ✨</p>
+    </section>
+
+    <section class="celebration hidden" id="celebration">
+      <div class="cake-wrap">
+        <span class="cake-sparkle sparkle-a">✦</span>
+        <span class="cake-sparkle sparkle-b">✧</span>
+        <div class="cake">🎂</div>
+        <div class="cake-glow"></div>
+      </div>
+
+      <p class="eyebrow">TODAY IS ALL ABOUT YOU</p>
+      <h2>Happy Birthday<br><span class="name">Nisha!</span></h2>
+      <p class="message">
+        Keep smiling, keep shining,<br>
+        and keep being your lovely self. 💕
+      </p>
+
+      <div class="photo-grid" id="photoGrid">
+        <figure class="photo-card">
+          <img src="images/nisha1.jpg" alt="Nisha memory 1">
+          <figcaption>Our little star ✨</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="images/nisha2.jpg" alt="Nisha memory 2">
+          <figcaption>Always precious 💗</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="images/nisha3.jpg" alt="Nisha memory 3">
+          <figcaption>Keep shining 🌷</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="images/nisha4.jpg" alt="Nisha memory 4">
+          <figcaption>Made of magic 🦋</figcaption>
+        </figure>
+      </div>
+
+      <button class="replay-button" id="replay" type="button">
+        ✨ Celebrate Again
+      </button>
+    </section>
+
+    <div class="bottom-note">Made with love, just for Nisha ♡</div>
+  </main>
+
+  <audio id="birthdayMusic" src="music/birthday.mp3"
+         preload="auto" loop></audio>
+
+  <button class="music-button" id="musicToggle"
+          type="button" aria-label="Toggle music">♫ Music</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

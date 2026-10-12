@@ -1,0 +1,388 @@
+
+:root {
+  --pink: #ffb8dc;
+  --pink-bright: #ff80c0;
+  --purple: #c8aaff;
+  --gold: #ffe5a3;
+  --white: #fff8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: #170d28;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--white);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background:
+    radial-gradient(ellipse at 50% 30%, #492451 0%, transparent 48%),
+    radial-gradient(ellipse at 10% 85%, #282050 0%, transparent 40%),
+    linear-gradient(145deg, #100b20, #24122f 55%, #130c26);
+}
+
+#fireworks {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .48;
+  background-image:
+    radial-gradient(2px 2px at 20% 25%, white 50%, transparent),
+    radial-gradient(2px 2px at 70% 20%, #ffd8f0 50%, transparent),
+    radial-gradient(1px 1px at 80% 60%, white 50%, transparent),
+    radial-gradient(2px 2px at 30% 80%, #ffe5a3 50%, transparent),
+    radial-gradient(1px 1px at 50% 50%, white 50%, transparent);
+  background-size: 170px 180px, 220px 200px, 140px 160px,
+                   200px 210px, 160px 190px;
+  animation: starTwinkle 4s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 780px);
+  min-height: 100svh;
+  margin: auto;
+  padding: 30px 18px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.top-tag {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 3px;
+  opacity: .9;
+  margin: 5px 0 20px;
+}
+
+.intro {
+  margin: auto 0;
+  width: 100%;
+  animation: appear 1s ease both;
+}
+
+.mini-hearts {
+  font-size: 25px;
+  letter-spacing: 5px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.eyebrow {
+  margin: 22px 0 12px;
+  color: #f4c8eb;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h1, h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -1px;
+}
+
+h1 {
+  font-size: clamp(48px, 12vw, 82px);
+}
+
+h1 span, h2 .name {
+  display: inline-block;
+  color: var(--pink);
+  text-shadow: 0 0 20px #ff80c066, 0 0 48px #d28bff44;
+  animation: nameGlow 3s ease-in-out infinite alternate;
+}
+
+.subtitle {
+  color: #ead8f3;
+  font-size: 14px;
+  margin: 18px 0 30px;
+}
+
+.gift-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto;
+  padding: 15px 23px;
+  min-height: 56px;
+  border: 1px solid #ffcae9;
+  border-radius: 40px;
+  color: #35172f;
+  background: linear-gradient(120deg, #ffd7ee, #f5c5ff, #ffe6b5);
+  box-shadow: 0 0 22px #e59aff40, 0 8px 30px #08031366;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  animation: buttonFloat 2.4s ease-in-out infinite;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.gift-button:active {
+  transform: scale(.96);
+}
+
+.gift-icon {
+  font-size: 25px;
+  animation: giftWiggle 2s ease-in-out infinite;
+}
+
+.button-sparkle {
+  color: #ac4b9b;
+}
+
+.tap-note {
+  color: #c8b1d9;
+  font-size: 11px;
+  margin-top: 15px;
+}
+
+.orbit {
+  position: absolute;
+  color: #ffd9f2;
+  opacity: .75;
+  pointer-events: none;
+  animation: float 4s ease-in-out infinite;
+}
+
+.orbit-one {
+  left: 9%;
+  top: 27%;
+  font-size: 35px;
+}
+
+.orbit-two {
+  right: 10%;
+  top: 38%;
+  color: var(--gold);
+  font-size: 27px;
+  animation-delay: -2s;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.celebration {
+  width: 100%;
+  margin: auto 0;
+  padding: 10px 0 20px;
+  animation: reveal .9s ease both;
+}
+
+.cake-wrap {
+  position: relative;
+  width: 150px;
+  height: 135px;
+  margin: 5px auto 0;
+  display: grid;
+  place-items: center;
+}
+
+.cake {
+  position: relative;
+  z-index: 1;
+  font-size: 83px;
+  filter: drop-shadow(0 0 22px #ff8fca55);
+  animation: cakeBounce 2.4s ease-in-out infinite;
+}
+
+.cake-glow {
+  position: absolute;
+  bottom: 14px;
+  width: 120px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffb8dc;
+  filter: blur(24px);
+  opacity: .55;
+}
+
+.cake-sparkle {
+  position: absolute;
+  color: var(--gold);
+  font-size: 24px;
+  animation: starTwinkle 1.5s infinite alternate;
+}
+
+.sparkle-a {
+  top: 10px;
+  left: 10px;
+}
+
+.sparkle-b {
+  right: 7px;
+  top: 28px;
+  animation-delay: .5s;
+}
+
+h2 {
+  font-size: clamp(39px, 10vw, 64px);
+}
+
+.message {
+  color: #f0dff4;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 18px 0 25px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+  width: min(100%, 430px);
+  margin: 24px auto;
+}
+
+.photo-card {
+  margin: 0;
+  padding: 8px 8px 12px;
+  overflow: hidden;
+  border: 1px solid #f5c8eb66;
+  border-radius: 13px;
+  background: linear-gradient(145deg, #ffffff16, #ffffff07);
+  box-shadow: 0 8px 25px #05020d44;
+  animation: photoAppear .7s ease both;
+}
+
+.photo-card:nth-child(2) { animation-delay: .12s; }
+.photo-card:nth-child(3) { animation-delay: .24s; }
+.photo-card:nth-child(4) { animation-delay: .36s; }
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  height: 145px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #3b2446;
+}
+
+.photo-card figcaption {
+  margin-top: 10px;
+  color: #ffe0f3;
+  font-size: 11px;
+}
+
+.replay-button, .music-button {
+  border: 1px solid #f7c6eb80;
+  color: var(--white);
+  background: #ffffff12;
+  border-radius: 30px;
+  padding: 11px 17px;
+  font-size: 12px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.replay-button {
+  margin-top: 10px;
+}
+
+.music-button {
+  position: fixed;
+  z-index: 5;
+  right: 14px;
+  bottom: 14px;
+  background: #271535e8;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 3px 18px #0003;
+}
+
+.music-button.playing {
+  color: #35172f;
+  background: linear-gradient(120deg, #ffd7ee, #ffe6b5);
+}
+
+.bottom-note {
+  margin-top: auto;
+  padding-top: 22px;
+  color: #c7acd8;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(25px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-5deg); }
+  50% { transform: translateY(-13px) rotate(7deg); }
+}
+
+@keyframes buttonFloat {
+  0%, 100% { box-shadow: 0 0 22px #e59aff40, 0 8px 30px #08031366; }
+  50% { box-shadow: 0 0 35px #f8a6ff77, 0 8px 30px #08031366; }
+}
+
+@keyframes giftWiggle {
+  0%, 80%, 100% { transform: rotate(0); }
+  85% { transform: rotate(-10deg); }
+  92% { transform: rotate(10deg); }
+}
+
+@keyframes nameGlow {
+  from { text-shadow: 0 0 12px #ff80c055; }
+  to { text-shadow: 0 0 28px #ff80c088, 0 0 45px #d28bff44; }
+}
+
+@keyframes cakeBounce {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+@keyframes starTwinkle {
+  from { opacity: .25; }
+  to { opacity: .8; }
+}
+
+@keyframes photoAppear {
+  from { opacity: 0; transform: translateY(12px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 380px) {
+  .page { padding-left: 13px; padding-right: 13px; }
+  .photo-card img { height: 120px; }
+  .orbit-one { left: 3%; }
+  .orbit-two { right: 4%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
